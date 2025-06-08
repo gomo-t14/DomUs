@@ -46,11 +46,13 @@ class OtodomSpider(scrapy.Spider):
                 self.logger.error(f"Error while parsing listing url: {e}")
                 continue
 
+
+
         #pagination 
         page_num = 2
         url = f"https://www.otodom.pl/pl/wyniki/wynajem/mieszkanie/cala-polska?limit=36&by=DEFAULT&direction=DESC&viewType=listing&page={page_num}"
        
-
+        #quick fix but return later 
         if page_num < 3:
             yield scrapy.Request(url = url , callback=self.parse)
             page_num =+ 1
