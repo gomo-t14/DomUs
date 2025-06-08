@@ -6,7 +6,7 @@
 import scrapy
 
 
-class RentalListingsItem(scrapy.Item):
+class Listings(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     Id = scrapy.Field()
@@ -23,6 +23,7 @@ class RentalListingsItem(scrapy.Item):
     Operational_Cost = scrapy.Field()
     Deposit = scrapy.Field()
     Type_of_Advertiser = scrapy.Field()
+    '''
     Amenities = scrapy.Field()
     Building_Construction_Year = scrapy.Field()
     Lift = scrapy.Field()
@@ -32,4 +33,4 @@ class RentalListingsItem(scrapy.Item):
     Additional_Features = scrapy.Field()
     Description = scrapy.Field()
 
-
+    '''
